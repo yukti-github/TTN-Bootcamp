@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> html work sample</title>
+	<meta charset="utf-8"> 
+<style type="text/css">
+	
+	@media screen and (min-width: 480px) {
+		body>#hide{
+			display: none;
+		}
+	
+	}
+	.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+ 
+ transform: translate(-50%, -50%); 
+ border: 9px groove #ccc5c6;
+ border-radius: 5px;
+
+}
+
+td
+{
+	height: 40px;
+	width: 90px;
+	text-align: center;
+}
+
+
+td
+{
+	background-color: #e0e0d1;
+}
+
+th
+{
+ background-color: #d0d1dd;
+ color: #252d89;
+}
+
+table td, table th {
+    border: 2px solid #605657;
+    border-radius: 5px;
+    border-right: none;
+    border-left: none;
+}
+
+tr th,td:last-child {
+   border-left: none;
+   border-right: 2px solid #605657;
+}
+tr th,td:first-child {
+   border-right: none;
+   border-left: 2px solid #605657;
+}
+
+h1
+{
+	color: #8d738e;
+}
+
+</style>
+
+</head>
+
+
+<body >
+<h1 align="center"> Employee Table</h1>
+
+
+<table  cellpadding="10" cellspacing="2" class="centered">
+
+	<thead>
+		<tr>
+		<th>Employee Number</th>
+		<th>Employee Name</th>
+		<th> Designation</th>
+	    <th> Department</th>
+	    </tr>
+	</thead>
+
+	<tbody>
+
+	  <tr class="row">
+		<td>3262</td>
+		<td>Yukti Sharma</td>
+		<td> Trainee</td>
+		<td>JVM</td>
+		</tr>
+
+	  <tr>
+		<td>3260</td>
+		<td>Rishabh Rajput</td>
+		<td> Trainee</td>
+		<td>JVM</td>
+		</tr>
+
+	  <tr>
+		<td>3578</td>
+		<td>Bulbul Sharma</td>
+		<td> Developer</td>
+		<td>FEEN</td>
+	   </tr>
+
+	   <tr>
+		<td>3438</td>
+		<td>Surbhi Garg</td>
+		<td> Designer</td>
+		<td> IOS</td>
+	   </tr>
+     
+      <tr>
+		<td>5438</td>
+		<td> Priya Singh</td>
+		<td> Quality Engineer</td>
+		<td>UI</td>
+	   </tr>
+
+	  <tr>
+		<td>2538</td>
+		<td>Shivam Aggarwal</td>
+		<td> Full stack developer</td>
+		<td> MEAN</td>
+	   </tr>
+
+	 </tbody>
+
+</table>
+</div>
+</body>
+</html>
