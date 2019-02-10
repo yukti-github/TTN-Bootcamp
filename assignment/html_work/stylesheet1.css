@@ -1,0 +1,169 @@
+* {
+    margin:0 ;
+    padding:0;
+}
+
+
+#div1{
+	
+	background-color: #383838 ;
+	margin-left: 6%;
+	margin-right: 6% ;
+	height: 100vh;
+
+}
+
+#div2
+{
+	font-size: 28px;
+	font-family: times new roman;
+	font-weight: 500;
+	margin-left: 10%;
+	margin-right: 10% ;
+	height: 17vh;
+	color: #C8C8C8;
+}
+
+#div3
+{
+	font-size: 14px;
+	font-family: asar, times new roman;
+	font-weight: 500;
+	padding: 5px;
+	margin-top: 4px;
+	height: 30%;
+	background-color: #282828;	
+
+}
+
+#fix
+{
+float: right;
+margin-right: 10px;
+}
+
+a
+{
+	margin: 14px;
+	text-align: center;
+	align-content: center;
+	color: white;
+	text-decoration: none;
+}
+
+#div4
+{
+	
+	/*height: 100vh;*/
+	 top: -20px;
+	background-color: white;
+	margin-bottom: none;
+   
+}
+
+
+
+#div5{
+	
+	font-size: 14px;
+	background-color: #282828;	
+      margin: 0 auto;
+
+	
+}
+
+#div6
+{
+	color: #C8C8C8;
+background-color: #303030;
+height: 360px ;
+width: 960px;
+margin: 0 auto;
+text-align: center;
+/*font-family: 'Kaushan Script', cursive;*/
+
+font-size: 28px;
+	font-family: times new roman;
+	font-weight: 500;
+}
+
+#div7
+{
+background-color: #E8E8E8;
+width: 960px;
+height: 60px;
+margin: 0 auto;
+color: #808080;
+padding: 4px;
+
+}
+
+#div8
+{
+	background-color: white;
+	margin: 0 auto;
+	width: 960px;
+	border-bottom: 1.5px solid #C8C8C8;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px;
+	color: #787878;
+}
+
+.div9
+{
+	height: 315px;
+	width: 215px;
+	float: left;
+	position: relative;
+background-color: #303030;
+margin: 8px;
+border: 3px solid #C8C8C8;
+position: relative;
+    padding-bottom: 30px;
+    text-align: center;
+vertical-align: middle;
+}
+
+#captn
+{  
+	text-transform: uppercase;
+	text-shadow: 1px 1px;
+	color: #787878;
+	position: absolute;
+    bottom: 0;
+    height: 30px;
+    background-color: #E0E0E0;
+    width: 215px;
+    padding-top: 10px;
+}
+
+#div0
+{
+	width:960px;
+	margin: 0 auto;
+   height: 400px;
+}
+
+#foot
+{
+ font-size: 16px;
+	font-family: asar, times new roman;
+	font-weight: 500;
+	margin-top: 1%;
+	padding-bottom: 10px;
+	height: 30%;
+	background-color: #282828;		
+}
+
+.heading
+{
+	font-size: 18px;
+	font-style: italic;
+	color: white;
+	top: 40%;
+  left: 44%;
+  transform: translate(-50%, -60%);
+  position: absolute;
+}
