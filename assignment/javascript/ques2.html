@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		javascript testing here
+	</title>
+
+</head>
+<body>
+<h2>Pallindrome check on string<br><br></h2>
+
+<label for="str1">Enter the string </label>
+<input type="text" id="str" name="string1">
+<button onclick="pallindrom();">Click</button>
+<p id="para1"></p>
+
+<script type="text/javascript">
+
+ function pallindrom()
+ {
+ 	 var p = document.getElementById("str").value;
+ 	q=p.split("").reverse("").join("");
+ 	if(p===q)	
+    document.getElementById('para1').innerHTML= "string "+p+ " is pallindrome";
+      else
+    document.getElementById('para1').innerHTML= "string not pallindrome";
+
+ }
+ 
+</script>
+
+<br><br>
+
+</script>
+</body>
+</html>
