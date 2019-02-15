@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Assignment</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<!-- QUESTION 15 -->
+<div> </div>
+<script type="text/javascript">
+
+	$(document).ready(function()
+		{
+			$.ajax({url:"https://jsonplaceholder.typicode.com/posts",method:"get",success:function(result)
+			{
+				for(var i=0;i<result.length;i++){
+					$("div").append(result[i].userId+result[i].id+result[i].title+result[i].body);
+				}
+				
+			}})
+		});
+</script>
+
+
+</body>
+</html>

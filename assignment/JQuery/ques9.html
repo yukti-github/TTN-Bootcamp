@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Assignment</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- 	question 9 -->
+<div>
+Select the city:-<select>
+<option value="Delhi">Delhi</option>
+<option value="Noida">Noida</option>
+<option value="Hapur">Hapur</option>
+<option value="Chennai">Chennai</option>
+<option value="Meerut">Meerut</option>
+</select>
+</div>
+<script type="text/javascript">
+	$('select').on('change', function() {
+      $("div").append( this.value+" " );
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Assignment</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- question 10 -->
+Select the city:-<select>
+<option value="Delhi">Delhi</option>
+<option value="Noida">Noida</option>
+<option value="Hapur">Hapur</option>
+<option value="Chennai">Chennai</option>
+<option value="Meerut">Meerut</option>
+</select>
+
+<script type="text/javascript">
+	$(document).ready(function()
+		{
+			$("select").hover(function(){
+				$(this)[0].size=$(this).find("option").length;
+			});
+			$("select").on("click",function(){
+				$(this)[0].size=0;
+			});
+		});
+</script>
+</body>
+</html>

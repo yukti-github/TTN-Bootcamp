@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Assignment</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Question 12 -->
+
+	<div class="parent"> hey this is div here!
+		
+		<li class="list1"> list within the div </li>
+		
+	</div>
+	<script type="text/javascript">
+	$( document ).ready(function() {
+			
+			$(".parent").on("click",function(e)
+				{
+					alert("hey div");
+					
+				});
+			$(".list1").click(function(e)
+				{
+					
+					alert("hey list");
+					e.preventDefault();
+					e.stopPropagation();
+				});
+			
+		});
+</script>
+
+</body>
+</html>

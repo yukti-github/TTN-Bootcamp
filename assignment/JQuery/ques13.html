@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Assignment</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		td{height: 50px;width: 70px; text-align: center;}
+	</style>
+</head>
+<body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<table border="5px solid black" class="tag" style="padding: 10px; height:300px;">
+	<tr>
+		<td class="tag">12</td>
+		<td>7</td>
+		<td>4</td>
+		<td>35</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>17</td>
+		<td>14</td>
+		<td>5</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>7</td>
+		<td>14</td>
+		<td>35</td>
+	</tr>
+</table>
+<button class="tag" type="submit" style="height: 120px;">click to change</button>
+<ul>
+<li class="tag" style="height: 100px;">list here</li> 
+<li class="tag" style="height: 700px;">list 2 here</li>
+</ul>
+
+
+	<!-- Question 13 -->
+	<script type="text/javascript">
+
+	$("button").click(function(){
+
+		$("[style]").each(function (){
+  		console.log("Height of element is: " + $(this).height());
+	});
+	});
+	
+</script>
+
+</body>
+</html>

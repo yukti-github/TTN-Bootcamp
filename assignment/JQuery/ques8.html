@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Assignment</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- question 8 -->
+			<div>
+   <button type="submit" id="click">Click </button></div>
+     <script type="text/javascript">
+	$( document ).ready(function() {
+			
+			$("#click").on("click",function()
+				{  var node=$("<input>",{type:"submit",title:"click",class:"one",value:"new"});
+					$("div").append(node);
+					$(".one").on("click",function(){
+				alert("new click");
+				  
+			});
+
+				});
+			
+			
+		});
+	</script>
+
+</body>
+</html>
