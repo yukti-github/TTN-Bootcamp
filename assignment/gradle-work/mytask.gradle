@@ -1,0 +1,6 @@
+task mytask{
+    println "initialising"
+    doLast{
+        println "printing from mytask.gradle"
+    }
+}

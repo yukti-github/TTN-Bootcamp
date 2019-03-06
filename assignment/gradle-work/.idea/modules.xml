@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/src/main/Java2.iml" filepath="$PROJECT_DIR$/src/main/Java2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradle-work.iml" filepath="$PROJECT_DIR$/gradle-work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-work_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-work_main.iml" group="gradle-work" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-work_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-work_test.iml" group="gradle-work" />
+    </modules>
+  </component>
+</project>

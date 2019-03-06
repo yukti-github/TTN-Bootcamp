@@ -1,0 +1,76 @@
+//ASSIGNMENT GRADLE
+
+apply plugin: "java"
+
+//QUESTION-1- Look up java plugin documentation. Make changes in manifest to make it executable with correct class. When run using java -jar JAR_NAME_HERE
+// the output should be text "Hello World" on the console.
+//
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'Employee'
+        )
+    }
+}
+
+//QUESTION 2-  look up idea plugin. make changes in build.gradle so that the sources of src/main/java as well as src/main/java2 are taken as sources. Ensure that when you make JAR file class files in both are added to the JAR.
+// This will teach you how projects with non-conventional structure can be used with gradle.
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java', 'src/main/java2']
+        }
+
+    }
+}
+
+//QUESTION 3- add 2 files file1.xml and file1.txt in src/main/resources manually.
+// make changes so that when creating jar only file1.xml is added to the jar.
+//
+sourceSets {
+    main {
+        resources{
+            srcDirs = ['src/main/Resources']
+            exclude 'file1.txt'
+        }
+    }
+}
+
+//QUESTION 4-  find how to what is an uberjar. Make changes so you can use commons lang3 StringUtil in your jar. Make this uber jar executable.
+// The output should be text but that should be using the StringUtils class of commons lang3
+repositories {
+  jcenter()
+    maven{
+        url "https://mvnrepository.com/artifact/org.apache.commons/commons-lang3"
+    }
+}
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "Employee"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+
+//QUESTION-5 Find a maven repository and add it as a repository. You can use bintray, jcenter
+//
+repositories {
+    jcenter()
+    mavenCentral()
+    maven{
+        url "https://mvnrepository.com/artifact/org.apache.commons/commons-lang3"
+    }
+}
+
+
+
+//QUESTION-6  Write a task in file "mytasks.gradle" and use it in your build.gradle
+apply from: "/home/yukti/gradle-work/mytask.gradle"
