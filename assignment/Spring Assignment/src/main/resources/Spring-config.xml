@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<context:component-scan base-package="Ques10"/>-->
+
+    <bean id="db" class="Database">
+        <property name="name" value="mysql"/>
+        <property name="port" value="1001"/>
+    </bean>
+
+
+    <bean id="hotDrink" name="tea" class="Tea">
+        <property name="drinkName" value="Chai"/>
+    </bean>
+
+    <bean id="TeaRestaurant" class="Restaurant" name="teaRestaurant" scope="prototype" >
+        <property name="hotDrink" ref="tea"></property>
+        <property name="type" value="strong masala"></property>
+    </bean>
+
+
+    <bean id="ExpressTeaRestaurant" class="Restaurant">
+        <property name="type" value="express tea"/>
+        <property name="hotDrink">
+            <bean class="ExpressTea">
+                <property name="drinkName" value="Express"></property>
+            </bean>
+        </property>
+    </bean>
+
+
+
+    <bean id="restaurantName" class="Restaurant" autowire="byName"/>
+
+    <!--<bean id="restaurantType" class="Restaurant" autowire="byType"/>-->
+
+    <bean id="constructorRestaurant" class="Restaurant" autowire="constructor">
+        <property name="hotDrink" ref="tea"/>
+    </bean>
+
+
+    <bean id="complex" class="Complex" name="complexBean">
+        <property name="list">
+            <list>
+                 <value>1c</value>
+                 <value>yukti</value>
+                 <value>3</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="1" value="yukti"/>
+                <entry key="2" value="sharma"/>
+            </map>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>121</value>
+                <value>122</value>
+                <value>121</value>
+                <value>143</value>
+            </set>
+        </property>
+    </bean>
+
+    <context:annotation-config/>
+
+</beans>
