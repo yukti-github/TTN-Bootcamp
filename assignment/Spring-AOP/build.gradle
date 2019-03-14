@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'Spring'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.springframework:spring-core:5.1.5.RELEASE'
+    implementation 'org.springframework.ws:spring-xml:3.0.7.RELEASE'
+    implementation 'mysql:mysql-connector-java:8.0.13'
+
+// https://mvnrepository.com/artifact/org.springframework/spring-aop
+// compile group: 'org.springframework', name: 'spring-aop', version: '5.0.6.RELEASE'
+// https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '2.1.1.RELEASE'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.6.10'
+
+}

@@ -1,0 +1,39 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+<aop:aspectj-autoproxy/>
+
+
+    <!--<bean id="db" class="Database"/>-->
+
+    <!--<bean id="dblistnr" class="DatabaseEventListener"/>-->
+
+    <!--<bean id="cstm" class="CustomEventListener"/>-->
+
+    <!--<bean id="lst" class="Ques2"/>-->
+
+    <!--<bean id="dummy" class="Dummy"/>-->
+
+    <!--<bean id="myAspect" class="demo.LoggingAspect"/>-->
+
+    <!--<bean id="AspectQ6" class="Ques6.AspectQues6"/>-->
+
+    <!--<bean id="Ques7" class="Ques7.LoggingAspects"/>-->
+
+    <!--<bean id="Ques8" class="Ques8.AspectQ8"/>-->
+
+    <bean id="Ques9" class="Ques9.AspectQ9"/>
+
+    <context:component-scan base-package="demo Ques6 Ques7 Ques8 Ques9"/>
+
+
+</beans>
