@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 10</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loading").hide();
+            $("#register").on('click', function (event) {
+                $("#loading").show();
+                var formData = $("#form").serialize();
+                console.log(formData);
+                myfunction(formData);
+                event.preventDefault();
+            });
+        });
+    </script>
+    <script th:src="@{Ques10.js}"></script>
+    <style>
+        img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+<form id="form" method="post">
+    id<br><input name="id" type="text"/><br>
+    name<br><input name="name" type="text"/><br>
+    email<br><input name="email" type="email"/><br>
+    <br>
+    <button id="register" type="submit">submit</button>
+</form>
+
+<div id="loading">
+  <center>  <h3> LOADING......</h3>  </center>
+</div>
+
+<div>
+    <h1 id="msg"></h1>
+</div>
+
+</body>
+</html>

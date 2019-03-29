@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 4</title>
+    <style>
+        table{
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div th:replace="Ques6::header"></div>
+
+<center>
+    <table border="2px solid black">
+        <tr>
+            <b>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>SALARY</td>
+            </b>
+        </tr>
+        <tr th:each="employee : ${employee}">
+            <td th:text="${employee.getId()}"></td>
+            <td th:text="${employee.getEmpName()}"></td>
+            <td th:text="${employee.getSalary()}"></td>
+        </tr>
+    </table>
+</center>
+
+<div th:replace="Ques6::footer"></div>
+
+</body>
+</html>
+

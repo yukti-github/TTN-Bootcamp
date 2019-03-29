@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 9</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script th:src="@{Ques9.js}"></script>
+</head>
+<body>
+
+<label>Customer: </label>
+<select id="userSelect">
+    <option th:value="None">Select One</option>
+    <option th:each="cust : ${T(com.demo.thymleafProject.Enum.Customer).values()}"
+            th:value="${cust.name()}" th:text="${cust.name()}" ></option>
+</select>
+<br>
+<div id="msg-div"></div>
+
+</body>
+</html>
