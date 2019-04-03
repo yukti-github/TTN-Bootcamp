@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="shortcut icon" th:href="@{/images/ttn.ico}" />
+
+    <title>REAP</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
+
+    <style type="text/css">
+        #center-div{
+            width: 600px;
+            height: 500px;
+            margin-top: 120px;
+        }
+
+        input{
+            width: 60%;
+            float: right;
+            margin-bottom: 15px;
+        }
+        label{
+            float: left;
+            margin-top: 10px;
+        }
+        form{
+            margin-right: 50px;
+        }
+        .span1{
+            padding-top: 20px;
+            margin-left: 60px;
+            font-size: 24px;
+        }
+
+        .fields{
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR- -->
+<div id="top">
+    <a href="#"><img th:src="@{/images/logo.png}" id="logo"></a>
+    <a href="#"><img th:src="@{/images/reap2.png}" id="logo2"></a>
+    <a href="register.html"><button class="btn1">SIGN UP</button></a>
+    <a href="login.html"><button class="btn11">LOGIN</button></a>
+</div>
+
+<div id="center-div">
+    <div id="div2">
+        <span class="span1">Create your R.E.A.P. Account  <img th:src="@{/images/ttnlogo.png}" width="45px" height="45px"></span>
+    </div>
+    <form>
+        <div class="fields">
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname" required="required">
+        </div>
+
+        <div class="fields">
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id="lname" required="required">
+        </div>
+
+        <div class="fields">
+            <label for="photo">Photo:</label>
+            <input type="file" name="photo" id="photo" required="required">
+        </div>
+
+        <div class="fields">
+            <label for="uid">E-mail:</label>
+            <input type="E-mail" name="mail" id="mail" required="required">
+        </div>
+
+        <div class="fields">
+            <label for="pswd">Password:</label>
+            <input type="Password" name="pswd" id="pswd" required="required">
+        </div>
+
+
+        <!--<span id="forgotpwd"><a href="forgot-password.html">Forgot Password</a></span>-->
+
+        <button onclick="#" class="btn1" id="btn2">Register</button>
+    </form>
+
+
+</div>
+
+<script type="text/javascript" src="reap.js"></script>
+
+</body>
+</html>>

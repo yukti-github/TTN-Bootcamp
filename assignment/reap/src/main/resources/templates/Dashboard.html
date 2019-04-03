@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="shortcut icon" th:href="@{/images/ttn.ico}"/>
+    <title>REAP</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{//maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css}">
+    <script th:src="@{//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"></script>
+    <script th:src="@{//maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js}"></script>
+    <!--<link rel="stylesheet" type="text/css" href="DashboardStyles.css">-->
+    <link rel="stylesheet" th:href="@{'/css/Dashboardstyles.css'}"/>
+
+</head>
+
+<body>
+
+<!-- NAVBAR- -->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav pull-left">
+                <a href="#"><img th:src="@{/images/logo.png}" id="logo"></a>
+                <a href="#"><img th:src="@{/images/reap2.png}" id="logo2"></a>
+            </ul>
+
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav dropdown">
+                <li><a href="#" class="active2">Back to Newers World</a></li>
+                <li><a href="#" class="active1"><img th:src="@{/images/timer.png}"> Dashboard</a></li>
+                <li><a href="#" class="active2"><img th:src="@{/images/star.png}" height="20px" width="20px"> Badges</a>
+                </li>
+                <li><a href="#" class="active2"> <img th:src="@{/images/certi.png}" height="20px" width="20px">
+                    Certificate</a></li>
+                <!-- 	<li><a href="#"> <img src="bell.png" height="25px" width="20px " id="bell"> </a></li> -->
+                <li><a href="#"> <img th:src="@{/images/yukti.jpeg}" height="45px" width="45px"> </a></li>
+            </ul>
+        </div>
+</nav>
+
+<div class="row" id="first">
+
+    <!-- left horizontal div -->
+    <div id="second">
+        <div class="headerdiv">
+            <span class="headerfont"><img th:src="@{/images/star.png}">  RECOGNIZE NEWER</span>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+
+                <form action="#" method="post">
+
+                    <div class="col-lg-4 col-md-4">
+                        <input type="text" class="select-newer"
+                               placeholder="Select a Newer"
+                               required="required" id="newer" autocomplete="on">
+
+                        <span class="select-newer" autocomplete="on">
+                                  <img th:src="@{/images/newer.png}" alt="">
+                                </span>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                Select a Badge
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img th:src="@{/images/goldstar.png}" alt="">
+                                        Gold
+                                        <span>
+                                            <i class="user-gold-badge">2</i>
+                                            </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <img th:src="@{/images/silverstar.png}" alt="">
+                                        Silver
+                                        <span>
+                                                <i class="user-gold-badge">4</i>
+                                            </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <img th:src="@{/images/bronzestar.png}" alt="">
+                                        Bronze
+                                        <span>
+                                                <i class="user-gold-badge">6</i>
+                                            </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 ">
+
+                        <select class="form-control" required="required" name="karma" id="karma">
+                            <option value="">Select a Karma/Core Value</option>
+                            <option value="6">Karma: Extra Miler</option>
+                            <option value="3">Karma: Knowledge Sharing</option>
+                            <option value="1">Karma: Mentorship</option>
+                            <option value="5">Karma: Pat on the back</option>
+                            <option value="7">Karma: Customer Delight</option>
+                            <option value="10">Core Value: Continuous Learning and Improvement</option>
+                            <option value="9">Core Value: Contribution</option>
+                            <option value="13">Core Value: Diligence</option>
+                            <option value="12">Core Value: Empathy</option>
+                            <option value="14">Core Value: Openness to Feedback and Change</option>
+                            <option value="11">Core Value: Responsible Freedom</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group col-lg-12 col-md-12 karma-description">
+                        <br><br>
+                        <label for="comment">Reason:</label>
+                        <textarea class="form-control" rows="5" id="comment">
+                                    Please select a karma/core value first.....
+                                </textarea>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+
+        <div class="panel-footer" style="height: 40px">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Recognize</button>
+            </div>
+        </div>
+
+        <!--<input class="btn btn-primary" type="submit" name="submit" value="Recognize" class="recognize" id="submit">-->
+
+    </div>
+
+    <!-- right horizontal div -->
+    <div id="third">
+        <div class="headerdiv">
+            <span class="headerfont"> <img th:src="@{/images/star.png}">  MY BADGES</span>
+        </div>
+
+        <center>
+            <div class="panel panel-primary" style="border:none;">
+
+                <div class="panel-body">
+                    <div class="badge-content">
+                        <div class="badge-content-left">
+                            <img th:src="@{/images/person.png}" alt="">
+                        </div>
+
+                        <div class="badge-content-right">
+                            <h4 id="mybadge"><a href="#" class="newer_board_user" data-renderedthrough="rightPanel">Yukti
+                                Sharma
+                            </a></h4>
+                            <span>
+                            <img th:src="@{/images/goldstar.png}" alt="">
+                            <i>0</i>
+                        </span>
+                            <span>
+                            <img th:src="@{/images/silverstar.png}" alt="">
+                            <i>0</i>
+                         </span>
+                            <span>
+                            <img th:src="@{/images/bronzestar.png}" alt="">
+                            <i>0</i>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </center>
+    </div>
+    <div id="second">
+        <div class="headerdiv">
+            <span class="headerfont"><img th:src="@{/images/star.png}">  WALL OF FAME</span>
+
+
+            <form class="navbar-form navbar-right" action="#" style="margin-right: 10px">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button id="logout-button" class="btn btn-primary" type="button"><span
+                        class="glyphicon glyphicon-calendar"> Filter</span>
+                </button>
+                <button id="logout-button" class="btn btn-primary" type="button"><span
+                        class="glyphicon glyphicon-download alt"> Download</span>
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+
+</div>
+
+<!--  <script type="text/javascript" src="reap.js"></script>
+-->
+</body>
+</html>
